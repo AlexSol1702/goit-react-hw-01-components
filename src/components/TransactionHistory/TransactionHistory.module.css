@@ -1,0 +1,35 @@
+.trHistory {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    font-size: 25px;
+    border-collapse: collapse;
+}
+
+.tHead {    
+    
+
+    color: beige;
+    background-color: rgb(91, 146, 248);
+}
+.tHead th {
+    width: 33%;
+    text-align: center;
+}
+
+tbody td {
+    width: 33%;
+    text-align: center;
+
+    font-size: 400;
+    
+}
+tbody td:not(:first-child) {
+    border-left: 2px solid rgb(208, 205, 199);
+}
+
+  
+  tbody tr:nth-child(even) {
+    background-color: #d3d3d5;
+  }

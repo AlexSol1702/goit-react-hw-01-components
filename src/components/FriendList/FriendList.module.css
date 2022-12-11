@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  align-items: center;
+  
+  margin-bottom: 10px;
+ 
+  font-weight: 500;
+
+  border-radius: 5px;
+
+  color: black;
+  background-color: white;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.5);
+}
+
+.status {
+    display: flex;
+    
+
+  width: 30px;
+  height: 30px;
+
+  margin-left: 40px;
+
+  border-radius: 50%;
+  background-color: red;
+}
+
+.online {
+  background-color: aqua;
+}
+.avatar {
+    margin-left: 30px;
+}
+.name {
+    margin-left: 30px;
+}
