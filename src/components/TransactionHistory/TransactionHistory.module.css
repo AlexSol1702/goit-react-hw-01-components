@@ -5,6 +5,8 @@
     background-color: white;
     font-size: 25px;
     border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .tHead {    
