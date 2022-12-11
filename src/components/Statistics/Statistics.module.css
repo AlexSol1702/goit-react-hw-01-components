@@ -14,6 +14,7 @@
     width: 100%;
 
     color: wheat;
+    text-shadow: 2px 2px 2px green;
 }
 .item {
     display: flex;
