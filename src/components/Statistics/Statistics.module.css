@@ -14,14 +14,12 @@
     width: 100%;
 
     color: wheat;
-    text-shadow: 2px 2px 2px green;
+    text-shadow: 2px 2px 2px blue;
 }
 .item {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color: rgb(117, 132, 117);
 
     width: 20%;
 }
