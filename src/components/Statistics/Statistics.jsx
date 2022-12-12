@@ -1,32 +1,34 @@
 import PropTypes from 'prop-types';
-import css from "./Statistics.module.css";
+import styles from './Statistics.module.css';
 
+export function Statistics({ title, stats }) {
+  const colorItem = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`; //---  << Случайный цвет >>
+  };
+  return (
+    <div className="container">
+      <section className={styles.statistics}>
+        {title && <h2 className={styles.title}>{title}</h2>}
 
-export  function Statistics({title, stats}) { 
-  const colorItem =()=> {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
- }
-    return (
-        <div className="container">
-          <section className={css.statistics}>
-          <h2 className={css.title}>{title && (title)}</h2>
-
-          <ul className={css.list}>
-             {stats.map
-              (({id, label, percentage}) => 
-                  <li className={css.item} style={{backgroundColor: colorItem()}} key={id}>
-                  <span className={css.label}>{label}</span>    
-                  <span className={css.percentage}>{percentage}%</span>
-                </li>                 
-              )}    
-          </ul>
-        </section>
-        </div>
-    )
+        <ul className={styles.list}>
+          {stats.map(({ id, label, percentage }) => (
+            <li
+              className={styles.item}
+              style={{ backgroundColor: colorItem() }}//---  << Добавл backgroundColor помимо основого styles >>
+              key={id}
+            >
+              <span className={styles.label}>{label}</span>
+              <span className={styles.percentage}>{percentage}%</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  );
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
@@ -34,6 +36,4 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
     })
   ).isRequired,
-   
-}
-
+};
